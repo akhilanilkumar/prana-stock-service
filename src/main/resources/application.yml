@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: stock-service
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/prana_inventory
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: root@123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:9090/eureka}
