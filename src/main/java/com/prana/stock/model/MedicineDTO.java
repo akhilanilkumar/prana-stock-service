@@ -14,7 +14,7 @@ public class MedicineDTO {
 
     private String name;
 
-    private String manufacturedBy;
+    private Long stockId;
 
     private String description;
 

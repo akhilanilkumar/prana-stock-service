@@ -2,15 +2,16 @@ spring:
   application:
     name: stock-service
   datasource:
-    username: root
-    url: jdbc:mysql://localhost:3306/prana_inventory
+    username: rootuser
+    url: jdbc:mysql://mysql-db.cz9eevms0bmy.ap-south-1.rds.amazonaws.com/prana_inventory
     driverClassName: com.mysql.cj.jdbc.Driver
-    password: root@123
+    password: zxcv+321
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
-
+#    url: jdbc:mysql://localhost:3306/prana_inventory
+#    password: root@123
 server:
   port: 8081
 
