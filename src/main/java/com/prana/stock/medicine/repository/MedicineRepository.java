@@ -1,6 +1,6 @@
-package com.prana.stock.repository;
+package com.prana.stock.medicine.repository;
 
-import com.prana.stock.entity.Medicine;
+import com.prana.stock.medicine.entity.Medicine;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

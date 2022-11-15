@@ -1,4 +1,4 @@
-package com.prana.stock.model;
+package com.prana.stock.medicine.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;
@@ -15,6 +15,8 @@ public class MedicineDTO {
     private String name;
 
     private Long stockId;
+
+    private Long manufactureId;
 
     private String description;
 

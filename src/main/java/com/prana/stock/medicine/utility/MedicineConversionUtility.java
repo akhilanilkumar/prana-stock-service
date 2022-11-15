@@ -1,9 +1,13 @@
-package com.prana.stock.utility;
+package com.prana.stock.medicine.utility;
 
-import com.prana.stock.entity.Medicine;
-import com.prana.stock.model.MedicineDTO;
+import com.prana.stock.medicine.entity.Medicine;
+import com.prana.stock.medicine.model.MedicineDTO;
 
-public final class MedicineUtility {
+public final class MedicineConversionUtility {
+
+    private MedicineConversionUtility() {
+//        Left blank intentionally
+    }
 
     public static MedicineDTO convertToDTO(Medicine medicine) {
         return MedicineDTO.builder()

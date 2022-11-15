@@ -1,5 +1,6 @@
-package com.prana.stock.entity;
+package com.prana.stock.inventory.entity;
 
+import com.prana.stock.common.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,5 +29,5 @@ public class Stock extends BaseEntity {
     private Long id;
 
     @Column(name = "fk_manufacture")
-    private String manufacturedBy;
+    private Long manufactureId;
 }

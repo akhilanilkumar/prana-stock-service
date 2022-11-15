@@ -10,8 +10,6 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-#    url: jdbc:mysql://localhost:3306/prana_inventory
-#    password: root@123
 server:
   port: 8081
 

@@ -1,4 +1,4 @@
-package com.prana.stock.entity;
+package com.prana.stock.common;
 
 import lombok.Getter;
 import lombok.Setter;
