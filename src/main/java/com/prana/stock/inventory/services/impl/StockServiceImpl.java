@@ -8,6 +8,7 @@ import com.prana.stock.medicine.repository.StockRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -26,7 +27,14 @@ public class StockServiceImpl implements StockService {
     @Override
     public StockDTO saveStock(StockDTO stockDTO) {
         Stock stock = StockConversionUtility.covertToEntity(stockDTO);
-        Stock savedStock = stockRepository.save(stock);
-        return StockConversionUtility.covertToDTO(savedStock);
+        Optional<StockDTO> dto = checkIfStockExists(stockDTO);
+        StockDTO finalDTO = dto.orElse(null);
+        if (dto.isEmpty()) {
+            stock.setCreatedAt(LocalDateTime.now());
+            stock.setLastModified(LocalDateTime.now());
+            Stock savedStock = stockRepository.save(stock);
+            finalDTO = StockConversionUtility.covertToDTO(savedStock);
+        }
+        return finalDTO;
     }
 }

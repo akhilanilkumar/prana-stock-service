@@ -3,6 +3,7 @@ package com.prana.stock.inventory.utility;
 
 import com.prana.stock.inventory.entity.Stock;
 import com.prana.stock.inventory.model.StockDTO;
+import org.jetbrains.annotations.NotNull;
 
 public final class StockConversionUtility {
 
@@ -10,7 +11,7 @@ public final class StockConversionUtility {
 //        Left blank intentionally
     }
 
-    public static Stock covertToEntity(StockDTO stockDTO) {
+    public static @NotNull Stock covertToEntity(StockDTO stockDTO) {
         Stock build = Stock.builder()
                 .id(stockDTO.getId())
                 .manufactureId(stockDTO.getManufactureId())
