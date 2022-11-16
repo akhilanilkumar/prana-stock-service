@@ -13,9 +13,9 @@ public final class StockConversionUtility {
 
     public static @NotNull Stock covertToEntity(StockDTO stockDTO) {
         Stock build = Stock.builder()
-                .id(stockDTO.getId())
                 .manufactureId(stockDTO.getManufactureId())
                 .build();
+        build.setId(stockDTO.getId());
         build.setCreatedAt(stockDTO.getCreatedAt());
         build.setLastModified(stockDTO.getLastModified());
         return build;

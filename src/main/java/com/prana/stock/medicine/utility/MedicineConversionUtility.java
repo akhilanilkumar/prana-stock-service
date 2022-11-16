@@ -25,7 +25,6 @@ public final class MedicineConversionUtility {
 
     public static Medicine convertToEntity(MedicineDTO medicineDTO) {
         Medicine build = Medicine.builder()
-                .id(medicineDTO.getId())
                 .name(medicineDTO.getName())
                 .stockId(medicineDTO.getStockId())
                 .description(medicineDTO.getDescription())
@@ -33,6 +32,7 @@ public final class MedicineConversionUtility {
                 .mfgDate(medicineDTO.getMfgDate())
                 .lastValidDate(medicineDTO.getLastValidDate())
                 .build();
+        build.setId(medicineDTO.getId());
         build.setLastModified(medicineDTO.getLastModified());
         build.setCreatedAt(medicineDTO.getCreatedAt());
         return build;
