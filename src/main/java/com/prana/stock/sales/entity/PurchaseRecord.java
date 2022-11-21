@@ -22,8 +22,6 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PurchaseRecord extends BaseEntity {
-//    @Column(name = "sales_id")
-//    private Long salesId;
 
     @Column(name = "medicine_id")
     private Long medicineId;
